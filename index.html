@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>contactforge-lab — exact contact manifolds</title>
+<style>
+  html,body{margin:0;height:100%;background:#0d1117;color:#e6edf3;font:14px/1.4 ui-sans-serif,system-ui}
+  #app{position:fixed;inset:0}
+  #hud{position:fixed;top:12px;left:12px;width:330px;background:#161b22dd;border:1px solid #30363d;border-radius:10px;padding:14px}
+  h1{font-size:16px;margin:0 0 6px}
+  .sub{color:#8b949e;font-size:12px;margin-bottom:10px}
+  label{display:block;margin:9px 0 3px;color:#8b949e;font-size:12px}
+  input[type=range]{width:100%}
+  .row{display:flex;justify-content:space-between;margin-top:8px;font-variant-numeric:tabular-nums}
+  .pass{color:#3fb950}.fail{color:#f85149}
+  code{color:#79c0ff}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="hud">
+  <h1>contactforge-lab</h1>
+  <div class="sub">Exact integer-rational contact manifolds. No epsilon.</div>
+  <label>scene <span id="sceneLbl">0 / 59</span></label>
+  <input id="scene" type="range" min="0" max="59" value="0">
+  <label>frame <span id="frameLbl">0 / 23</span></label>
+  <input id="frame" type="range" min="0" max="23" value="0">
+  <div class="row"><span>contacts</span><b id="contacts">–</b></div>
+  <div class="row"><span>manifold</span><b id="manifold">–</b></div>
+  <div class="row"><span>max depth</span><b id="depth">–</b></div>
+  <div class="row"><span>feature hash</span><b id="hash">–</b></div>
+  <div class="row"><span>node bake</span><b id="bake">–</b></div>
+  <div class="row"><span>agreement</span><b id="agree">–</b></div>
+</div>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
